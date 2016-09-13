@@ -1,4 +1,5 @@
 ﻿using System;
+using System.ComponentModel.DataAnnotations;
 using System.Security.AccessControl;
 
 namespace MvcMusicStore.Models
@@ -11,6 +12,9 @@ namespace MvcMusicStore.Models
 
         public string Contents { get; set; }
 
+        [Required()]
+        [Display(Name = "Email Address")]
+        [DataType(DataType.EmailAddress)]
         public string ReviewerEmail { get; set; }
     }
 }
